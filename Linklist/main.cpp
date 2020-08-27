@@ -16,12 +16,13 @@ int main()
 	for (int i = 0; i < 5; i++) {
 		cout << "The current list is: ";
 		l.print();
+        cout<< "Head Item: " << l.headItem() <<endl;
 		cout << "Does 9 exist in the list?" << (l.exist(9) ? "Yes" : "No") << endl << endl;
 		l.removeHead();
 	}
     for (int i = 0; i < 5; i++) {
         cout << "The current list is: ";
-        l.print();
+        g.print();
 
     }
     

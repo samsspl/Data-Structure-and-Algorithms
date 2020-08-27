@@ -35,7 +35,7 @@ void List::print() {
 
         }
     }
-
+    cout << endl;
 }
 
 bool List::exist(int n) {
