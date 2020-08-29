@@ -19,17 +19,14 @@ private:
 	ListNode *_head;
 
 public:
-	List()
-	{
-		_size = 0;
-		_head = NULL;
-	};
-
+    List();
 	~List();
 	void insertHead(int);
 	void removeHead();
 	void print();
 	bool exist(int);
 	int headItem();
-
+    void insertTail(int);
+    void removeTail();
+    int tailItem();
 };

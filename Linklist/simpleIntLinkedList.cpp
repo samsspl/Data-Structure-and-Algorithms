@@ -1,7 +1,11 @@
 #include <iostream>
 #include "simpleIntLinkedList.h"
 using namespace std;
-
+List::List()
+{
+    _size = 0;
+    _head = NULL;
+};
 ListNode::ListNode(int n)
 {
 	_item = n;
@@ -54,8 +58,25 @@ bool List::exist(int n) {
 
 int List::headItem()
 {
-	return 0; // modify this
+    return this->_head->content(); // modify this
 }
+
+void List::insertTail(int m){
+    ListNode *tem = new ListNode(m);
+    _tail->_next = tem;
+    _tail = tem;
+    _size++;
+}
+
+void List::removeTail(){
+
+    
+}
+
+int List::tailItem(){
+    return this->_tail->content();
+}
+
 
 List::~List()
 {
