@@ -17,10 +17,11 @@ class List
 private:
 	int _size;
 	ListNode *_head;
-
+    ListNode *_tail;
 public:
     List();
 	~List();
+    int sizeoflist();
 	void insertHead(int);
 	void removeHead();
 	void print();

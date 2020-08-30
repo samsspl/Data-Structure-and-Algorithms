@@ -12,14 +12,20 @@ int main()
 	l.insertHead(9);
 	l.insertHead(1);
 	l.insertHead(20);
+    l.insertTail(35);
+    l.insertTail(85);
+    l.insertTail(66);
+    l.insertTail(83);
 
-	for (int i = 0; i < 5; i++) {
+    int n = l.sizeoflist();
+	for (int i = 0; i < n; i++) {
 		cout << "The current list is: ";
 		l.print();
         cout<< "Head Item: " << l.headItem() <<endl;
         cout<< "Tail Item: " << l.tailItem() <<endl;
 		cout << "Does 9 exist in the list?" << (l.exist(9) ? "Yes" : "No") << endl << endl;
-		l.removeHead();
+		//l.removeHead();
+        l.removeTail();
 	}
     for (int i = 0; i < 5; i++) {
         cout << "The current list is: ";

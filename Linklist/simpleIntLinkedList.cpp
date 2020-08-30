@@ -5,7 +5,12 @@ List::List()
 {
     _size = 0;
     _head = NULL;
+    _tail = NULL;
 };
+int List::sizeoflist(){
+    return this->_size;
+}
+
 ListNode::ListNode(int n)
 {
 	_item = n;
@@ -18,6 +23,9 @@ void List::insertHead(int n)
 	aNewNode->_next = _head;
 	_head = aNewNode;
 	_size++;
+    if(_size == 1){    // setting tail element at initial stage
+        _tail = _head;
+    }
 };
 
 void List::removeHead()
@@ -69,8 +77,29 @@ void List::insertTail(int m){
 }
 
 void List::removeTail(){
+    if(_size >= 2){
+        ListNode *tmp = _head;
+        tmp = _head->_next;
+        ListNode *pre = _head;
+        while(tmp->_next != NULL){
+            pre = pre->_next;
+            tmp = tmp->_next;
+        }
+        if(tmp->_next == NULL){
+            pre->_next = NULL;
+            _tail = pre;
+            _size--;
+            delete tmp;
 
-    
+        }
+
+    }else if(_size == 1){
+        ListNode *k = _head;
+        _head = _head->_next;
+        _tail = _tail->_next;
+        delete k;
+        _size--;
+    }
 }
 
 int List::tailItem(){
