@@ -16,6 +16,6 @@ using namespace std;
 void swapp(int &a, int &b);
 
 void Bubblesort(int arr[], int size);
-void Bubblesort(std::vector<int> v);
+void Bubblesort(std::vector<int> &v);
 
 #endif /* Header_h */
