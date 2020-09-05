@@ -28,9 +28,9 @@ void swapp_(T *a, T *b){
 void Bubblesort(int arr[], int size){
 
     for(int i = 0; i < size - 1; i++){
-        for(int j = i + 1; j < size; j++){
-            if(arr[i] > arr[j]){
-                swapp(arr[i], arr[j]);
+        for(int j = 0; j < size - i - 1; j++){
+            if(arr[j] > arr[j+1]){
+                swapp(arr[j], arr[j+1]);
             }
         }
     }
@@ -41,9 +41,9 @@ void Bubblesort(std::vector<int> &v){
 
     long size = distance(v.begin(), v.end());
     for(int i = 0; i < size - 1; i++){
-        for(int j = i + 1; j < size; j++){
-            if(v[i] > v[j])
-                swapp_(&v[i], &v[j]);
+        for(int j = 0; j < size - i - 1; j++){
+            if(v[j] > v[j+1])
+                swapp_(&v[j], &v[j+1]);
         }
     }
 
